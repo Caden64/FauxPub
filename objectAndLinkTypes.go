@@ -1,5 +1,9 @@
 package main
 
+type ObjectAndLinkTypes interface {
+	Relationship | Article | Document | Audio | Image | Video | Note | Page |
+		Event | Place | Mention | Profile | Tombstone
+}
 type Relationship struct {
 	Object
 	Subject      string
@@ -41,6 +45,24 @@ type Event struct {
 
 type Place struct {
 	Object
-	Accuracy string
-	Altitude string
+	Accuracy  string
+	Altitude  string
+	Latitude  string
+	Longitude string
+	Radius    string
+	Units     string
+}
+
+type Mention struct {
+	Link
+}
+
+type Profile struct {
+	Object
+}
+
+type Tombstone struct {
+	Object
+	FormerType string
+	Deleted    string
 }

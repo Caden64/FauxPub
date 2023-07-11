@@ -1,5 +1,11 @@
 package main
 
+type ActivityTypes interface {
+	Accept | TentativeAccept | Add | Arrive | Create | Delete | Follow |
+		Ignore | Join | Leave | Like | Offer | Invite | Reject | TentativeReject |
+		Remove | Update | View | Listen | Read | Move | Travel | Announce | Dislike |
+		Question | Flag | Block
+}
 type Accept struct {
 	Activity
 }

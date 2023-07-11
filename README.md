@@ -4,6 +4,7 @@
 
 ### Project features status
 
+- [ ] Types
 - [ ] Users
 - [ ] Log-in as xyz user
 - [ ] Create User Content

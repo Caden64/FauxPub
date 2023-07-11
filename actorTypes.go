@@ -1,5 +1,8 @@
 package main
 
+type ActorTypes interface {
+	Application | Group | Organization | Person | Service
+}
 type Application struct {
 	Object
 }

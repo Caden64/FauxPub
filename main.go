@@ -8,7 +8,7 @@ func main() {
 			Collection: Collection{
 				Object: Object{
 					Context:      "",
-					Type:         "",
+					Type:         "Test",
 					Id:           "",
 					Name:         "",
 					Attachment:   "",
@@ -48,5 +48,5 @@ func main() {
 		},
 		StartIndex: "",
 	}
-	fmt.Println(x.TotalItems)
+	fmt.Println(x.Type)
 }

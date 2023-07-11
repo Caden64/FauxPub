@@ -1,34 +1,34 @@
 package main
 
 type Object struct {
-	Context      string `json:"@context"`
-	Type         string `json:"type"`
-	Id           string `json:"id"`
-	Name         string `json:"name"`
-	Attachment   string `json:"attachment"`
-	AttributedTo string `json:"attributedTo"`
-	Audience     string `json:"audience"`
-	Content      string `json:"content"`
-	EndTime      string `json:"endTime"`
-	Generator    string `json:"generator"`
-	Icon         string `json:"icon"`
-	Image        string `json:"image"`
-	InReplyTo    string `json:"inReplyTo"`
-	Location     string `json:"location"`
-	Preview      string `json:"preview"`
-	Published    string `json:"published"`
-	Replies      string `json:"replies"`
-	StartTime    string `json:"startTime"`
-	Summary      string `json:"summary"`
-	Tag          string `json:"tag"`
-	Updated      string `json:"updated"`
-	URL          string `json:"URL"`
-	To           string `json:"to"`
-	BTo          string `json:"BTo"`
-	CC           string `json:"CC"`
-	BCC          string `json:"BCC"`
-	MediaType    string `json:"mediaType"`
-	Duration     string `json:"duration"`
+	Context      string             `json:"@context"`
+	Type         ActivityStreamType `json:"type"`
+	Id           `json:"id"`
+	Name         `json:"name"`
+	Attachment   `json:"attachment"`
+	AttributedTo `json:"attributedTo"`
+	Audience     `json:"audience"`
+	Content      `json:"content"`
+	EndTime      `json:"endTime"`
+	Generator    `json:"generator"`
+	Icon         `json:"icon"`
+	Image        ImageType `json:"image"`
+	InReplyTo    `json:"inReplyTo"`
+	Location     `json:"location"`
+	Preview      `json:"preview"`
+	Published    `json:"published"`
+	Replies      `json:"replies"`
+	StartTime    `json:"startTime"`
+	Summary      `json:"summary"`
+	Tag          `json:"tag"`
+	Updated      `json:"updated"`
+	URL          `json:"URL"`
+	To           `json:"to"`
+	BTo          `json:"BTo"`
+	CC           `json:"CC"`
+	BCC          `json:"BCC"`
+	MediaType    `json:"mediaType"`
+	Duration     `json:"duration"`
 }
 
 type Link struct {
