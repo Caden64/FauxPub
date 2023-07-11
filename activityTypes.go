@@ -112,7 +112,7 @@ type Dislike struct {
 
 type Question struct {
 	IntransitiveActivity
-	OneOf  string
-	AnyOf  string
-	Closed string
+	OneOf
+	AnyOf
+	Closed
 }

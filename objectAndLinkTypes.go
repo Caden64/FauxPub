@@ -6,9 +6,9 @@ type ObjectAndLinkTypes interface {
 }
 type Relationship struct {
 	Object
-	Subject      string
-	Relationship string
-	Object2      string
+	Subject
+	Relationship  RelationshipType
+	RelatedObject Object
 }
 
 type Article struct {
@@ -45,12 +45,12 @@ type Event struct {
 
 type Place struct {
 	Object
-	Accuracy  string
-	Altitude  string
-	Latitude  string
-	Longitude string
-	Radius    string
-	Units     string
+	Accuracy
+	Altitude
+	Latitude
+	Longitude
+	Radius
+	Units
 }
 
 type Mention struct {
@@ -63,6 +63,6 @@ type Profile struct {
 
 type Tombstone struct {
 	Object
-	FormerType string
-	Deleted    string
+	FormerType
+	Deleted
 }

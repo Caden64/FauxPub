@@ -2,75 +2,78 @@ package main
 
 type Id string
 
-type ActivityStreamType string
+type ActivityStreamType []string
 
-type Actor string
+type Actor []string
 
-type Attachment string
+type Attachment []string
 
-type AttributedTo string
+type AttributedTo []string
 
-type BCC string
+type Audience []string
 
-type BTo string
+type BCC []string
 
-type CC string
+type BTo []string
 
-type Current string
+type CC []string
+
+type Context []string
+type Current []string
 
 type First string
 
-type Generator string
+type Generator []string
 
-type Icon string
+type Icon []string
 
-type ImageType string
+type ImageType []string
 
-type InReplyTo string
+type InReplyTo []string
 
-type Instrument string
+type Instrument []string
 
 type Last string
 
-type Location string
+type Location []string
 
-type Items string
+type Items []string
 
-type OneOf string
+type OneOf []string
 
-type AnyOf string
+type AnyOf []string
 
-type Closed string
+type Closed []string
 
-type Origin string
+type Origin []string
 
 type Next string
 
-type ObjectType string
+type ObjectType []string
 
 type Prev string
 
-type Preview string
+type Preview []string
 
-type Result string
+type Result []string
 
 type Replies string
 
-type Tag string
+type Tag []string
 
-type Target string
+type Target []string
 
-type To string
+type To []string
 
-type URL string
+type URL []string
 
 type Accuracy float32
 
 type Altitude float32
 
-type Content string
+type Content []string
 
-type Name string
+type Name []string
 
 type Duration string
 
@@ -96,11 +99,11 @@ type StartTime string
 
 type Radius string
 
-type Rel string
+type Rel []string
 
 type StartIndex string
 
-type Summary string
+type Summary []string
 
 type TotalItems string
 
@@ -112,12 +115,10 @@ type Width string
 
 type Subject string
 
-type RelationshipType string
+type RelationshipType []string
 
 type Describes string
 
 type FormerType string
 
 type Deleted string
-
-type Audience string

@@ -1,7 +1,7 @@
 package main
 
 type Object struct {
-	Context      string             `json:"@context"`
+	Context      `json:"@context"`
 	Type         ActivityStreamType `json:"type"`
 	Id           `json:"id"`
 	Name         `json:"name"`
@@ -32,52 +32,52 @@ type Object struct {
 }
 
 type Link struct {
-	Context   string
-	Type      string
-	Href      string
-	Hreflang  string
-	MediaType string
-	Name      string
-	Height    string
-	Width     string
-	Preview   string
-	Rel       string
+	Context   `json:"@context"`
+	Type      ActivityStreamType `json:"type"`
+	Href      `json:"href"`
+	HrefLang  `json:"hrefLang"`
+	MediaType `json:"mediaType"`
+	Name      `json:"name"`
+	Height    `json:"height"`
+	Width     `json:"width"`
+	Preview   `json:"preview"`
+	Rel       `json:"rel"`
 }
 
 type Activity struct {
-	Object
-	Actor      string
-	Target     string
-	Result     string
-	Origin     string
-	Instrument string
+	Object     `json:"object"`
+	Actor      `json:"actor"`
+	Target     `json:"target"`
+	Result     `json:"result"`
+	Origin     `json:"origin"`
+	Instrument `json:"instrument"`
 }
 
 type IntransitiveActivity struct {
-	Activity
+	Activity `json:"activity"`
 }
 
 type Collection struct {
-	Object
-	TotalItems string
-	Current    string
-	First      string
-	Last       string
-	Items      string
+	Object     `json:"object"`
+	TotalItems `json:"totalItems"`
+	Current    `json:"current"`
+	First      `json:"first"`
+	Last       `json:"last"`
+	Items      `json:"items"`
 }
 
 type OrderedCollection struct {
-	Collection
+	Collection `json:"collection"`
 }
 
 type CollectionPage struct {
-	Collection
-	PartOf string
-	Next   string
-	Prev   string
+	Collection `json:"collection"`
+	PartOf     `json:"partOf"`
+	Next       `json:"next"`
+	Prev       `json:"prev"`
 }
 
 type OrderedCollectionPage struct {
-	CollectionPage
-	StartIndex string
+	CollectionPage `json:"collectionPage"`
+	StartIndex     `json:"startIndex"`
 }
