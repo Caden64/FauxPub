@@ -1,9 +1,5 @@
 package main
 
-type ObjectAndLinkTypes interface {
-	Relationship | Article | Document | Audio | Image | Video | Note | Page |
-		Event | Place | Mention | Profile | Tombstone
-}
 type Relationship struct {
 	Object
 	Subject
@@ -58,6 +54,7 @@ type Mention struct {
 }
 
 type Profile struct {
+	Describes
 	Object
 }
 

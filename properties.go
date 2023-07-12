@@ -1,124 +1,244 @@
 package main
 
-type Id string
+type Id struct {
+	Id any `json:"id"`
+}
 
-type ActivityStreamType []string
+type ActivityStreamType struct {
+	ActivityStreamType any `json:"type"`
+}
 
-type Actor []string
+type Actor struct {
+	Actor any `json:"actor"`
+}
 
-type Attachment []string
+type Attachment struct {
+	Attachment any `json:"attachment"`
+}
 
-type AttributedTo []string
+type AttributedTo struct {
+	AttributedTo any `json:"attributedTo"`
+}
 
-type Audience []string
+type Audience struct {
+	Audience any `json:"audience"`
+}
 
-type BCC []string
+type BCC struct {
+	BCC any `json:"BCC"`
+}
 
-type BTo []string
+type BTo struct {
+	BTo any `json:"BTo"`
+}
 
-type CC []string
+type CC struct {
+	CC any `json:"CC"`
+}
 
-type Context []string
-type Current []string
+type Context struct {
+	Context any `json:"@context"`
+}
+type Current struct {
+	Current any `json:"current"`
+}
 
-type First string
+type First struct {
+	First any `json:"first"`
+}
 
-type Generator []string
+type Generator struct {
+	Generator any `json:"generator"`
+}
 
-type Icon []string
+type Icon struct {
+	Icon any `json:"icon"`
+}
 
-type ImageType []string
+type ImageType struct {
+	ImageType any `json:"imageType"`
+}
 
-type InReplyTo []string
+type InReplyTo struct {
+	InReplyTo any `json:"inReplyTo"`
+}
 
-type Instrument []string
+type Instrument struct {
+	Instrument any `json:"instrument"`
+}
 
-type Last string
+type Last struct {
+	Last any `json:"last"`
+}
 
-type Location []string
+type Location struct {
+	Location any `json:"location"`
+}
 
-type Items []string
+type Items struct {
+	Items any `json:"items"`
+}
 
-type OneOf []string
+type OneOf struct {
+	OneOf any `json:"oneOf"`
+}
 
-type AnyOf []string
+type AnyOf struct {
+	AnyOf any `json:"anyOf"`
+}
 
-type Closed []string
+type Closed struct {
+	Closed any `json:"closed"`
+}
 
-type Origin []string
+type Origin struct {
+	Origin any `json:"origin"`
+}
 
-type Next string
+type Next struct {
+	Next any `json:"next"`
+}
 
-type ObjectType []string
+type Prev struct {
+	Prev any `json:"prev"`
+}
 
-type Prev string
+type Preview struct {
+	Preview any `json:"preview"`
+}
 
-type Preview []string
+type Result struct {
+	Result any `json:"result"`
+}
 
-type Result []string
+type Replies struct {
+	Replies any `json:"replies"`
+}
 
-type Replies string
+type Tag struct {
+	Tag any `json:"tag"`
+}
 
-type Tag []string
+type Target struct {
+	Target any `json:"target"`
+}
 
-type Target []string
+type To struct {
+	To any `json:"to"`
+}
 
-type To []string
+type URL struct {
+	URL any `json:"URL"`
+}
 
-type URL []string
+type Accuracy struct {
+	Accuracy any `json:"accuracy"`
+}
 
-type Accuracy float32
+type Altitude struct {
+	Altitude any `json:"altitude"`
+}
 
-type Altitude float32
+type Content struct {
+	Context any `json:"context"`
+}
 
-type Content []string
+type Name struct {
+	Name any `json:"name"`
+}
 
-type Name []string
+type Duration struct {
+	Duration any `json:"duration"`
+}
 
-type Duration string
+type Height struct {
+	Height any `json:"height"`
+}
 
-type Height string
+type Href struct {
+	Href any `json:"href"`
+}
 
-type Href string
+type HrefLang struct {
+	HrefLang any `json:"hrefLang"`
+}
 
-type HrefLang string
+type PartOf struct {
+	PartOf any `json:"partOf"`
+}
 
-type PartOf string
+type Latitude struct {
+	Latitude any `json:"latitude"`
+}
 
-type Latitude string
+type Longitude struct {
+	Longitude any `json:"longitude"`
+}
 
-type Longitude string
+type MediaType struct {
+	MediaType any `json:"mediaType"`
+}
 
-type MediaType string
+type EndTime struct {
+	EndTime any `json:"endTime"`
+}
 
-type EndTime string
+type Published struct {
+	Published any `json:"published"`
+}
 
-type Published string
+type StartTime struct {
+	StartTime any `json:"startTime"`
+}
 
-type StartTime string
+type Radius struct {
+	Radius any `json:"radius"`
+}
 
-type Radius string
+type Rel struct {
+	Rel any `json:"rel"`
+}
 
-type Rel []string
+type StartIndex struct {
+	StartIndex any `json:"startIndex"`
+}
 
-type StartIndex string
+type Summary struct {
+	Summary any `json:"summary"`
+}
 
-type Summary []string
+type TotalItems struct {
+	TotalItems any `json:"totalItems"`
+}
 
-type TotalItems string
+type Units struct {
+	Units any `json:"units"`
+}
 
-type Units string
+type Updated struct {
+	Updated any `json:"updated"`
+}
 
-type Updated string
+type Width struct {
+	Width any `json:"width"`
+}
 
-type Width string
+type Subject struct {
+	Subject any `json:"subject"`
+}
 
-type Subject string
+type RelationshipType struct {
+	RelationshipType any `json:"relationshipType"`
+}
 
-type RelationshipType []string
+type Describes struct {
+	Describes any `json:"describes"`
+}
 
-type Describes string
+type FormerType struct {
+	FormerType any `json:"formerType"`
+}
 
-type FormerType string
-
-type Deleted string
+type Deleted struct {
+	Deleted any `json:"deleted"`
+}

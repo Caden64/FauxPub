@@ -1,83 +1,87 @@
 package main
 
+type Base interface {
+	Object | Link
+}
 type Object struct {
-	Context      `json:"@context"`
-	Type         ActivityStreamType `json:"type"`
-	Id           `json:"id"`
-	Name         `json:"name"`
-	Attachment   `json:"attachment"`
-	AttributedTo `json:"attributedTo"`
-	Audience     `json:"audience"`
-	Content      `json:"content"`
-	EndTime      `json:"endTime"`
-	Generator    `json:"generator"`
-	Icon         `json:"icon"`
-	Image        ImageType `json:"image"`
-	InReplyTo    `json:"inReplyTo"`
-	Location     `json:"location"`
-	Preview      `json:"preview"`
-	Published    `json:"published"`
-	Replies      `json:"replies"`
-	StartTime    `json:"startTime"`
-	Summary      `json:"summary"`
-	Tag          `json:"tag"`
-	Updated      `json:"updated"`
-	URL          `json:"URL"`
-	To           `json:"to"`
-	BTo          `json:"BTo"`
-	CC           `json:"CC"`
-	BCC          `json:"BCC"`
-	MediaType    `json:"mediaType"`
-	Duration     `json:"duration"`
+	Context      `json:"@context,omitempty"`
+	Type         ActivityStreamType `json:"type,omitempty"`
+	Id           `json:"id,omitempty"`
+	Name         `json:"name,omitempty"`
+	Attachment   `json:"attachment,omitempty"`
+	AttributedTo `json:"attributedTo,omitempty"`
+	Audience     `json:"audience,omitempty"`
+	Content      `json:"content,omitempty"`
+	EndTime      `json:"endTime,omitempty"`
+	Generator    `json:"generator,omitempty"`
+	Icon         `json:"icon,omitempty"`
+	Image        ImageType `json:"image,omitempty"`
+	InReplyTo    `json:"inReplyTo,omitempty"`
+	Location     `json:"location,omitempty"`
+	Preview      `json:"preview,omitempty"`
+	Published    `json:"published,omitempty"`
+	Replies      `json:"replies,omitempty"`
+	StartTime    `json:"startTime,omitempty"`
+	Summary      `json:"summary,omitempty"`
+	Tag          `json:"tag,omitempty"`
+	Updated      `json:"updated,omitempty"`
+	URL          `json:"URL,omitempty"`
+	To           `json:"to,omitempty"`
+	BTo          `json:"BTo,omitempty"`
+	CC           `json:"CC,omitempty"`
+	BCC          `json:"BCC,omitempty"`
+	MediaType    `json:"mediaType,omitempty"`
+	Duration     `json:"duration,omitempty"`
 }
 
 type Link struct {
-	Context   `json:"@context"`
-	Type      ActivityStreamType `json:"type"`
-	Href      `json:"href"`
-	HrefLang  `json:"hrefLang"`
-	MediaType `json:"mediaType"`
-	Name      `json:"name"`
-	Height    `json:"height"`
-	Width     `json:"width"`
-	Preview   `json:"preview"`
-	Rel       `json:"rel"`
+	Context   `json:"@context,omitempty"`
+	Type      ActivityStreamType `json:"type,omitempty"`
+	Href      `json:"href,omitempty"`
+	HrefLang  `json:"hrefLang,omitempty"`
+	MediaType `json:"mediaType,omitempty"`
+	Name      `json:"name,omitempty"`
+	Height    `json:"height,omitempty"`
+	Width     `json:"width,omitempty"`
+	Preview   `json:"preview,omitempty"`
+	Rel       `json:"rel,omitempty"`
 }
 
 type Activity struct {
-	Object     `json:"object"`
-	Actor      `json:"actor"`
-	Target     `json:"target"`
-	Result     `json:"result"`
-	Origin     `json:"origin"`
-	Instrument `json:"instrument"`
+	Object     `json:"object,omitempty"`
+	Actor      `json:"actor,omitempty"`
+	Target     `json:"target,omitempty"`
+	Result     `json:"result,omitempty"`
+	Origin     `json:"origin,omitempty"`
+	Instrument `json:"instrument,omitempty"`
 }
 
 type IntransitiveActivity struct {
-	Activity `json:"activity"`
+	Activity `json:"activity,omitempty"`
 }
 
-type Collection struct {
-	Object     `json:"object"`
-	TotalItems `json:"totalItems"`
-	Current    `json:"current"`
-	First      `json:"first"`
-	Last       `json:"last"`
-	Items      `json:"items"`
+type Collection[b Base] struct {
+	PossibleLink b `json:"object,omitempty"`
+	Object
+	TotalItems `json:"totalItems,omitempty"`
+	Current    `json:"current,omitempty"`
+	First      `json:"first,omitempty"`
+	Last       `json:"last,omitempty"`
+	Items      []Items `json:"items,omitempty"`
 }
 
-type OrderedCollection struct {
-	Collection `json:"collection"`
+type OrderedCollection[b Base] struct {
+	Collection[b] `json:"collection,omitempty"`
 }
 
-type CollectionPage struct {
-	Collection `json:"collection"`
-	PartOf     `json:"partOf"`
-	Next       `json:"next"`
-	Prev       `json:"prev"`
+type CollectionPage[b Base] struct {
+	Collection[b] `json:"collection,omitempty"`
+	PartOf        `json:"partOf,omitempty"`
+	Next          `json:"next,omitempty"`
+	Prev          `json:"prev,omitempty"`
 }
 
-type OrderedCollectionPage struct {
-	CollectionPage `json:"collectionPage"`
-	StartIndex     `json:"startIndex"`
+type OrderedCollectionPage[b Base] struct {
+	CollectionPage[b] `json:"collectionPage,omitempty"`
+	StartIndex        `json:"startIndex,omitempty"`
 }
