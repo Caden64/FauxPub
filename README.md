@@ -1,13 +1,13 @@
 # FauxPub
 ---
-## A testing activity pub implementation for fake content
+## A way for my website to have an ActivityPub account that I can also post from
 
 ### Project features status
 
-- [ ] Types
-- [ ] Users
-- [ ] Log-in as xyz user
-- [ ] Create User Content
-- [ ] Retrieve User Content
-- [ ] Like / Dislike function on user content
-- [ ] Comment on user content
+- [x] WebFinger
+- [x] Get content from website
+- [ ] Display content from website
+- [ ] Allow social.caden32.com specific posts
+- [ ] Allow comments of all posts
+- [ ] Show posts and comments according to ActivityPub spec for Lemmy and Mastodon
+- [ ] Followers
